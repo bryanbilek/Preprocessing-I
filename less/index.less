@@ -54,6 +54,90 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+
+//variables
+@padding-mid: 2%;
+@font-size-text: 2rem;
+@link-font-size: 2rem;
+@bg-color: yellow;
+@border-style: 3px dotted blue;
+@h1-font:'Bangers', cursive; 
+
+* {
+	max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+//header section
+.links {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 1%;
+	border: 2px solid black;
+}
+
+a {
+	text-decoration: none;
+	color: gold;
+	font-size:@link-font-size;
+}
+
+h1 {
+	text-align: center;
+	font-size: 4rem;
+	color: gold;
+	font-family: @h1-font;
+}
+
+
+
+//Middle sections
+.container2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: @bg-color;
+
+	.about-me {
+		width: 50%;
+		padding: @padding-mid;
+		font-size: @font-size-text;
+		text-align: center;
+		border: @border-style;
+	}//closes about-me
+
+	.skills {
+		.about-me ();
+	}//closes skills
+
+	.work-history {
+		width: 100%;
+		padding: @padding-mid;
+		font-size: @font-size-text;
+		text-align: center;
+		border: @border-style;
+	}//closes work-history
+}
+
+h2 {
+	font-size: 3rem;
+	color: blue;
+}
+
+
+
+
+//footer section
+.contact {
+	.work-history();
+}
+
+//media queries to add for mobile
+@media (max-width: 500px) {
+
 }
 
